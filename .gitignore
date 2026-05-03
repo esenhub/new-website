@@ -1,3 +1,12 @@
 digital-urun-upload.zip
 digital-urun-upload/
 github-desktop-prelaunch/
+
+# Non-website files
+davinci-renders/
+davinci_*.lua
+davinci_*.py
+add_clips_10s_30s.fcpxml
+premiere_*.jsx
+
+.vercel
