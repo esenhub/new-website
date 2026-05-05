@@ -15,17 +15,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
 
-      - name: Deploy theme via FTP
+      - name: Deploy theme via FTP (plain)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
           local-dir: ./wordpress-theme/dijital-urunler/
           server-dir: /public_html/wp-content/themes/dijital-urunler/
           dangerous-clean-slate: false
+          timeout: 60000
           exclude: |
             **/.git*
             **/.git*/**
